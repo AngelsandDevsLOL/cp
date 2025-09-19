@@ -4,6 +4,6 @@ Sorted by packages, where the package name is generally the contest (NoContest i
 
 There may be duplicate files (Ex: Treehouse.java and Treehouse2.java), which represents 2 versions of code that I separately wrote to start from scratch (one of them probably won't work). 
 
-Disclaimer: Some programs may be unfinished/doesn't work!
+Disclaimer: Some programs may be unfinished/doesn't work! Some files may be in the wrong folder (probably the CCC folder) and most problems are <= 15 points on DMOJ
 
 Everything is handwritten and typed. 
