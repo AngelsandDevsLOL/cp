@@ -1,0 +1,57 @@
+package CCC;
+
+import java.util.*;
+import java.io.*;
+
+public class LeastWord {
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static PrintWriter pr = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+    static StringTokenizer st;
+    public static void main(String[] args) throws IOException{
+        int n = readInt();
+        int l = readInt();
+        String[] array = new String[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = readLine();
+            StringBuilder sb = new StringBuilder();
+            sb.append(array[i]);
+            sb.reverse();
+            String x = String.valueOf(sb);
+            for (int j = 0; j < x.length(); j++) {
+                char character = x.charAt(j);
+                char character2 = array[i].charAt(j);
+                if (character2 == character) {
+                    continue;
+                } else if (character2 > character) {
+                    array[i] = x;
+                } else if (character2 < character) {
+                    break;
+                }
+            }
+        }
+        Arrays.sort(array);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+        }
+    }
+    static String next () throws IOException {
+        while (st == null || !st.hasMoreTokens())
+            st = new StringTokenizer(br.readLine().trim());
+        return st.nextToken();
+    }
+    static long readLong () throws IOException {
+        return Long.parseLong(next());
+    }
+    static int readInt () throws IOException {
+        return Integer.parseInt(next());
+    }
+    static double readDouble () throws IOException {
+        return Double.parseDouble(next());
+    }
+    static char readCharacter () throws IOException {
+        return next().charAt(0);
+    }
+    static String readLine () throws IOException {
+        return br.readLine().trim();
+    }
+}
